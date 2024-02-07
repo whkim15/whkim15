@@ -1,5 +1,7 @@
 ### Wanhee Kim
-Hi there 👋 This is a personal GitHub of WanheeKim. He is a Ph.D. student in the Department of Geography & Sustainability at the University of Tennessee, Knoxville. His research interest lies in Location modeling and Spatiotemporal analysis.
+
+Hi there 👋 
+This is a personal GitHub of WanheeKim. He is a Ph.D. student in the Department of Geography & Sustainability at the University of Tennessee, Knoxville. His research interest lies in Location modeling and Spatiotemporal analysis.
 
 <!--
 **whkim15/whkim15** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
