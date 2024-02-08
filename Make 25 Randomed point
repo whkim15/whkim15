@@ -1,0 +1,68 @@
+### Import Clustered 25 points.
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+
+def is_far_enough(new_point, existing_points, min_distance=2):
+    for point in existing_points:
+        if np.linalg.norm(np.array(new_point) - np.array(point)) < min_distance:
+            return False
+    return True
+
+# Function to generate clustered points
+def generate_cluster_points(center, std_dev, num_points):
+    points = set()
+    while len(points) < num_points:
+        x = np.random.normal(center[0], std_dev)
+        y = np.random.normal(center[1], std_dev)
+        
+        # Ensure points are integers and within the desired range
+        x, y = int(round(x)), int(round(y))
+        if x > 1 and y > 1 and x <= 31 and y <= 31 and is_far_enough((x, y), points) :
+            points.add((x, y))
+
+    return list(points)
+
+# Set the number of points and the cluster centers
+num_points = 25
+cluster_center1 = (7, 7)
+cluster_center2 = (23, 23)
+std_dev = 5
+
+# Generate points for each cluster
+cluster1_points = generate_cluster_points(cluster_center1, std_dev, num_points // 2)
+cluster2_points = generate_cluster_points(cluster_center2, std_dev, num_points - len(cluster1_points))
+
+# Combine the points from both clusters
+all_points = cluster1_points + cluster2_points
+
+# Visualization
+figsize = (10, 10)  # Graph size
+point_size = 100    # Point size
+font_size = 12      # Font size
+tick_size = 12      # Tick size
+
+fig, ax = plt.subplots(figsize=figsize)
+x, y = zip(*all_points)
+ax.scatter(x, y, c='blue', marker='o', s=point_size)
+
+for i, point in enumerate(all_points, start=1):
+    ax.text(point[0], point[1], f' {i}', fontsize=font_size, verticalalignment='bottom')
+
+ax.set_title('Clustered Points', fontsize=font_size)
+ax.set_xlabel('X axis', fontsize=font_size)
+ax.set_ylabel('Y axis', fontsize=font_size)
+ax.tick_params(labelsize=tick_size)
+ax.grid(True, zorder=2)
+boundary = Rectangle((0, 0), 33, 33, linewidth=1, edgecolor='orange', facecolor='none', zorder=3)
+ax.add_patch(boundary)
+
+plt.show()
+
+# Calculate distance matrix
+distance_matrix = calculate_distance_matrix(all_points)
+matrix_str = ',\n'.join('[' + ', '.join(str(cell) for cell in row) + ']' for row in distance_matrix)
+
+# Print results
+print(all_points)
+print(matrix_str)
