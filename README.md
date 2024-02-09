@@ -1,9 +1,11 @@
-### Wanhee Kim  ([CV_Wanhee KIM_Jan2024.pdf](https://github.com/whkim15/whkim15/files/14215984/CV_Wanhee.KIM_Jan2024.pdf))
+### Wanhee Kim
 
-Hi there 👋 
+👋: Hi there 👋 
 This is a personal GitHub of WanheeKim. He is a Ph.D. student in the Department of Geography & Sustainability at the University of Tennessee, Knoxville. His research interest lies in Location modeling and Spatiotemporal analysis.
 
-Now I am living in Knoxville, TN. This is the map of area where I am living these days.
+🤔 CV: [CV_Wanhee KIM_Jan2024.pdf](https://github.com/whkim15/whkim15/files/14215984/CV_Wanhee.KIM_Jan2024.pdf)
+
+📫 Now I am living in Knoxville, TN. This is the map of area where I am living these days.
 
 ![](https://gisgeography.com/wp-content/uploads/2020/06/Knoxville-Road-Map.jpg)
 
